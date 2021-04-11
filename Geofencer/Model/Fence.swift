@@ -2,7 +2,7 @@
 //  Fence.swift
 //  Geofencer
 //
-//  Created by Karthik on 11/04/21.
+//  Created by Karthik on 10/04/21.
 //
 
 import Foundation
@@ -14,5 +14,4 @@ struct  Fence {
     let longitude : CLLocationDegrees
     let radius : Double
     let id : String
-
 }

@@ -28,7 +28,6 @@ class ViewController: UIViewController {
                 
         fence.fenceTracking { [weak self]
             location  in
-            print(location.latitude,location.longitude)
             DBManager.shared.createDB(with: location)
             //DBManager.shared.readDB()
         }

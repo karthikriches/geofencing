@@ -16,7 +16,6 @@ class  FenceManager : NSObject, CLLocationManagerDelegate {
     weak  var  delegate : CLLocationManagerDelegate?
 
     init(fence : Fence) {
-       
         self.fence = fence
         super.init()
         self.createFence()
