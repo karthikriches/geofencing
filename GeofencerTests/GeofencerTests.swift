@@ -32,13 +32,12 @@ class GeofencerTests: XCTestCase {
     
     func test1(){
         let expect = expectation(description: "geofenceEntryExit")
-        let mock = mockFenceDelegate()
-        fence1.delegate = mock
-        fence1.fenceTracking { (location) in
+
+        fence1.fenceTracking { location in
             XCTAssertNotNil(location)
             expect.fulfill()
         }
-        waitForExpectations(timeout: 10, handler: nil)
+        waitForExpectations(timeout: 15, handler: nil)
 
 
     }
@@ -48,13 +47,15 @@ class GeofencerTests: XCTestCase {
 
 class mockFenceDelegate : NSObject, CLLocationManagerDelegate  {
     
-    private var expectation : XCTestExpectation?
-    var didEnter : ((Bool)->Void)?
+    var action = "false"
         
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        didEnter!(true)
+        action="entry"
     }
     
-
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        action="exit"
+    }
+    
     
 }

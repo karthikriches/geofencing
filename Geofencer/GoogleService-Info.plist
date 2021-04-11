@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>996279002744-fk0nvbcdj2cslbck6optlqlfus75j08o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.996279002744-fk0nvbcdj2cslbck6optlqlfus75j08o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDEx55ffTYA9E6AbMEtT1bYn9bVtjW_DCE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>996279002744</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.karthik.Geofencer</string>
+	<key>PROJECT_ID</key>
+	<string>geofenzer</string>
+	<key>STORAGE_BUCKET</key>
+	<string>geofenzer.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:996279002744:ios:9d1d4d68f67f4d3778af8d</string>
+</dict>
+</plist>
