@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		259FCD6B2622F5920019589B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 259FCD6A2622F5920019589B /* GoogleService-Info.plist */; };
+		25DB3F15262365E000A3EC7D /* Fence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB3F14262365E000A3EC7D /* Fence.swift */; };
 		25E16DAF26204A4900F51BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DAE26204A4900F51BC6 /* AppDelegate.swift */; };
 		25E16DB126204A4900F51BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DB026204A4900F51BC6 /* SceneDelegate.swift */; };
 		25E16DB326204A4900F51BC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DB226204A4900F51BC6 /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		25E16DBB26204A4A00F51BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E16DBA26204A4A00F51BC6 /* Assets.xcassets */; };
 		25E16DBE26204A4A00F51BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E16DBC26204A4A00F51BC6 /* LaunchScreen.storyboard */; };
 		25E16DC926204A4A00F51BC6 /* GeofencerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DC826204A4A00F51BC6 /* GeofencerTests.swift */; };
-		25E16DD426204A4A00F51BC6 /* GeofencerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DD326204A4A00F51BC6 /* GeofencerUITests.swift */; };
 		25E16DE52620564A00F51BC6 /* FenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DE42620564A00F51BC6 /* FenceManager.swift */; };
 		25E16DE62620564A00F51BC6 /* FenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DE42620564A00F51BC6 /* FenceManager.swift */; };
 		25E16DF42620A8F800F51BC6 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E16DF32620A8F800F51BC6 /* DBManager.swift */; };
@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		22BE9AA8CE84F40D21DD1D5F /* Pods-Geofencer-GeofencerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofencer-GeofencerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geofencer-GeofencerUITests/Pods-Geofencer-GeofencerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		259FCD6A2622F5920019589B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25DB3F14262365E000A3EC7D /* Fence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fence.swift; sourceTree = "<group>"; };
 		25E16DAB26204A4900F51BC6 /* Geofencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geofencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E16DAE26204A4900F51BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E16DB026204A4900F51BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +59,6 @@
 		25E16DC826204A4A00F51BC6 /* GeofencerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencerTests.swift; sourceTree = "<group>"; };
 		25E16DCA26204A4A00F51BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E16DCF26204A4A00F51BC6 /* GeofencerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofencerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25E16DD326204A4A00F51BC6 /* GeofencerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencerUITests.swift; sourceTree = "<group>"; };
-		25E16DD526204A4A00F51BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E16DE42620564A00F51BC6 /* FenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceManager.swift; sourceTree = "<group>"; };
 		25E16DF32620A8F800F51BC6 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		2A59390091F947DC1FFE32F7 /* Pods_Geofencer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofencer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,12 +99,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25DB3F4926236B5800A3EC7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25DB3F14262365E000A3EC7D /* Fence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25DB3F4A26236B6A00A3EC7D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25E16DF32620A8F800F51BC6 /* DBManager.swift */,
+				25E16DE42620564A00F51BC6 /* FenceManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25DB3F4B26236B8100A3EC7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25E16DB426204A4900F51BC6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25DB3F4C26236B8700A3EC7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25E16DB226204A4900F51BC6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		25E16DA226204A4900F51BC6 = {
 			isa = PBXGroup;
 			children = (
 				25E16DAD26204A4900F51BC6 /* Geofencer */,
 				25E16DC726204A4A00F51BC6 /* GeofencerTests */,
-				25E16DD226204A4A00F51BC6 /* GeofencerUITests */,
 				25E16DAC26204A4900F51BC6 /* Products */,
 				7A68516BFE0BA50FEE963F33 /* Pods */,
 				E489F4F3252A4AAECE4438B3 /* Frameworks */,
@@ -125,15 +156,15 @@
 		25E16DAD26204A4900F51BC6 /* Geofencer */ = {
 			isa = PBXGroup;
 			children = (
+				25DB3F4926236B5800A3EC7D /* Model */,
+				25DB3F4A26236B6A00A3EC7D /* ViewModel */,
+				25DB3F4C26236B8700A3EC7D /* Controller */,
+				25DB3F4B26236B8100A3EC7D /* View */,
 				25E16DAE26204A4900F51BC6 /* AppDelegate.swift */,
 				25E16DB026204A4900F51BC6 /* SceneDelegate.swift */,
-				25E16DF32620A8F800F51BC6 /* DBManager.swift */,
 				259FCD6A2622F5920019589B /* GoogleService-Info.plist */,
-				25E16DB226204A4900F51BC6 /* ViewController.swift */,
-				25E16DB426204A4900F51BC6 /* Main.storyboard */,
 				25E16DBA26204A4A00F51BC6 /* Assets.xcassets */,
 				25E16DBC26204A4A00F51BC6 /* LaunchScreen.storyboard */,
-				25E16DE42620564A00F51BC6 /* FenceManager.swift */,
 				25E16DBF26204A4A00F51BC6 /* Info.plist */,
 				25E16DB726204A4900F51BC6 /* Geofencer.xcdatamodeld */,
 			);
@@ -147,15 +178,6 @@
 				25E16DCA26204A4A00F51BC6 /* Info.plist */,
 			);
 			path = GeofencerTests;
-			sourceTree = "<group>";
-		};
-		25E16DD226204A4A00F51BC6 /* GeofencerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				25E16DD326204A4A00F51BC6 /* GeofencerUITests.swift */,
-				25E16DD526204A4A00F51BC6 /* Info.plist */,
-			);
-			path = GeofencerUITests;
 			sourceTree = "<group>";
 		};
 		7A68516BFE0BA50FEE963F33 /* Pods */ = {
@@ -445,6 +467,7 @@
 				25E16DB326204A4900F51BC6 /* ViewController.swift in Sources */,
 				25E16DE52620564A00F51BC6 /* FenceManager.swift in Sources */,
 				25E16DAF26204A4900F51BC6 /* AppDelegate.swift in Sources */,
+				25DB3F15262365E000A3EC7D /* Fence.swift in Sources */,
 				25E16DB126204A4900F51BC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +485,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E16DD426204A4A00F51BC6 /* GeofencerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

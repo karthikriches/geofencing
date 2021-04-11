@@ -10,18 +10,14 @@ import CoreLocation
 
 class  FenceManager : NSObject, CLLocationManagerDelegate {
     
-    let manager  = CLLocationManager()
-    private let fenceCenter : CLLocationCoordinate2D
-    private let radius : Double
-    private let id : String
+    private let manager  = CLLocationManager()
+    private let fence : Fence!
     private var completion :((CLLocationCoordinate2D)->Void)?
     weak  var  delegate : CLLocationManagerDelegate?
 
-
-    init(fenceCenter:CLLocationCoordinate2D,radius:Double, id : String) {
-        self.fenceCenter = fenceCenter
-        self.radius = radius
-        self.id = id
+    init(fence : Fence) {
+       
+        self.fence = fence
         super.init()
         self.createFence()
     }
@@ -33,10 +29,11 @@ class  FenceManager : NSObject, CLLocationManagerDelegate {
     }
     
     private func createFence(){
-        let fence = CLCircularRegion(center: fenceCenter, radius: radius, identifier: id)
-        fence.notifyOnEntry=true
-        fence.notifyOnExit=true
-        manager.startMonitoring(for: fence)
+        let center = CLLocationCoordinate2D(latitude: fence.latitude, longitude: fence.longitude)
+        let fenceRegion = CLCircularRegion(center: center, radius: fence!.radius, identifier: fence!.id)
+        fenceRegion.notifyOnEntry=true
+        fenceRegion.notifyOnExit=true
+        manager.startMonitoring(for: fenceRegion)
     }
     
     

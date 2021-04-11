@@ -31,8 +31,8 @@ class DBManager {
            let data = try context.fetch(request)
             print(data.count)
             for i in data {
-                i.value(forKey: "latitude")
-                i.value(forKey: "longitude")
+                print( i.value(forKey: "latitude") ?? "" )
+                print( i.value(forKey: "longitude") ?? "" )
             }
         }
         catch {

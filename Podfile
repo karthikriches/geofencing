@@ -15,8 +15,6 @@ target 'Geofencer' do
     # Pods for testing
   end
 
-  target 'GeofencerUITests' do
-    # Pods for testing
-  end
+ 
 
 end

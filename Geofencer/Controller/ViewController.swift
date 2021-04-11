@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationButton: UIButton!
     
     //create an instance of  geofence
-    let fence = FenceManager(fenceCenter: (CLLocationCoordinate2D.init(latitude: 37.785834, longitude: 80.406416)) , radius: 100, id: "fence1")
+    let fence = FenceManager(fence: Fence(latitude: 37.785834, longitude: 80.406416, radius: 100, id: "fence1"))
+        
+    //fence: Fence(fenceCenter: CLLocationCoordinate2D.init(latitude: 37.785834, longitude: 80.406416), radius: 100, id: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
 
     @IBAction func locationPressed(_ sender: Any) {
                 
-        fence.fenceTracking {
+        fence.fenceTracking { [weak self]
             location  in
             print(location.latitude,location.longitude)
             DBManager.shared.createDB(with: location)
