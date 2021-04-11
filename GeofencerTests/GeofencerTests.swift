@@ -15,7 +15,8 @@ class GeofencerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        fence1 = FenceManager(fenceCenter: (CLLocationCoordinate2D.init(latitude: 37.785834, longitude: 80.406416)) , radius: 100, id: "fence1")
+        let region = Fence(latitude: 37.785834, longitude: 80.406416, radius: 100, id: "fence1")
+        fence1 = FenceManager(fence: region )
 
     }
     
@@ -27,7 +28,7 @@ class GeofencerTests: XCTestCase {
     }
     
     
-    func test1(){
+    func testEntryExit(){
         let expect = expectation(description: "geofenceEntryExit")
 
         fence1.fenceTracking { location in
