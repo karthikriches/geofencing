@@ -10,10 +10,10 @@ import CoreLocation
 
 class  FenceManager : NSObject, CLLocationManagerDelegate {
     
-     let manager  = CLLocationManager()
-     public let fence : Fence!
-     var completion :((CLLocationCoordinate2D)->Void)?
-    weak  var  delegate : CLLocationManagerDelegate?
+     private let manager  = CLLocationManager()
+     private let fence : Fence!
+     private var completion :((CLLocationCoordinate2D)->Void)?
+     weak var  delegate : CLLocationManagerDelegate?
 
     init(fence : Fence) {
         self.fence = fence
