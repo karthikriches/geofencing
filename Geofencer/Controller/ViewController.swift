@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     
     //create an instance of  geofence
     let fence = FenceManager(fence: Fence(latitude: 37.785834, longitude: 80.406416, radius: 100, id: "fence1"))
-        
-    //fence: Fence(fenceCenter: CLLocationCoordinate2D.init(latitude: 37.785834, longitude: 80.406416), radius: 100, id: "")
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         locationButton.layer.cornerRadius = 5
