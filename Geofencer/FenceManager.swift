@@ -55,11 +55,4 @@ class  FenceManager : NSObject, CLLocationManagerDelegate {
         print("Exiting fence",location.latitude,location.longitude,manager.location!.timestamp)
         completion?(location)
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard  let location = locations.last else {
-            return
-        }
-        completion?(location.coordinate)
-    }
-            
 }

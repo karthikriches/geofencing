@@ -12,12 +12,10 @@ import  CoreLocation
 class GeofencerTests: XCTestCase {
 
     var fence1 : FenceManager!
-    var fence2 : FenceManager!
 
     override func setUp() {
         super.setUp()
         fence1 = FenceManager(fenceCenter: (CLLocationCoordinate2D.init(latitude: 37.785834, longitude: 80.406416)) , radius: 100, id: "fence1")
-        fence2 = FenceManager(fenceCenter: (CLLocationCoordinate2D.init(latitude: 12.785834, longitude: 80.406416)) , radius: 100, id: "fence2")
 
     }
     
@@ -26,7 +24,6 @@ class GeofencerTests: XCTestCase {
         super.tearDown()
         print("tear down")
         fence1 = nil
-        fence2 = nil
     }
     
     
